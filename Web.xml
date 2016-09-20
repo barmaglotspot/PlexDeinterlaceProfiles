@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Client name="Web">
   <!-- Author: Plex Inc. -->
-  <!-- Modified by zynine (github.com/zynine-) -->
+  <!-- Modified by zynine (github.com/zynine-) from PMS 1.1.4.2757 -->
   <TranscodeTargets>
     <VideoProfile protocol="hls" container="mpegts" codec="h264" audioCodec="aac,mp3" context="streaming">
       <Setting name="VideoEncodeFlags" value="-deinterlace" />
