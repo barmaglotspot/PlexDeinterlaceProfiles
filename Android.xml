@@ -2,8 +2,9 @@
 <Client name="Android">
   <!-- Author: Plex Inc. -->
   <!-- Modified by zynine (github.com/zynine-) from PMS 1.1.4.2757 -->
+  <!-- Modified audiocode aac to mp3 to improve compatibility -->
   <TranscodeTargets>
-    <VideoProfile protocol="hls" container="mpegts" codec="h264" audioCodec="aac" context="streaming">
+    <VideoProfile protocol="hls" container="mpegts" codec="h264" audioCodec="mp3" context="streaming">
       <Setting name="VideoEncodeFlags" value="-deinterlace" />
     </VideoProfile>
     <VideoProfile protocol="dash" container="mp4" codec="h264" audioCodec="aac" context="streaming" />
