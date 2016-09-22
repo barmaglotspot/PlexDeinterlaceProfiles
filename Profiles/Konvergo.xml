@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Client name="Konvergo">
+<!-- Modified by zynine (github.com/zynine-) from PMS 1.1.4.2757 -->
+  <TranscodeTargets>
+    <VideoProfile protocol="http" container="mkv" codec="h264" audioCodec="opus,vorbis,flac" subtitleCodec="ass,srt,pgs,vobsub" context="streaming">
+        <Setting name="VideoEncodeFlags" value="-deinterlace" />
+    </VideoProfile>    
+    <MusicProfile container="mkv" codec="opus" />
+    <PhotoProfile container="jpeg" />
+  </TranscodeTargets>
+</Client>

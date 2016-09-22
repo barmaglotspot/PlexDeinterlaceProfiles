@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Client name="PlayStation 4 App">
+  <!-- Author: Plex Inc. -->
+  <!-- Modified by zynine (github.com/zynine-) from PMS 1.1.4.2757 -->
+  <TranscodeTargets>
+    <VideoProfile protocol="hls" container="mpegts" videoCodec="h264" audioCodec="aac" context="streaming">
+        <Setting name="VideoEncodeFlags" value="-deinterlace" />
+    </VideoProfile>
+    <MusicProfile protocol="hls" container="mpegts" videoCodec="h264" audioCodec="aac" context="streaming">
+        <Setting name="VideoEncodeFlags" value="-deinterlace" />
+    </VideoProfile>
+  </TranscodeTargets>
+  <CodecProfiles>
+    <VideoCodec name="*">
+      <Limitations>
+        <LowerBound name="video.width" value="50" isRequired="true" />
+        <LowerBound name="video.height" value="50" isRequired="true" />
+        <UpperBound name="video.width" value="1920" isRequired="true" />
+        <UpperBound name="video.height" value="1080" isRequired="true" />
+        <UpperBound name="video.bitDepth" value="8" />
+      </Limitations>
+    </VideoCodec>
+    <VideoAudioCodec name="aac">
+      <Limitations>
+        <UpperBound name="audio.channels" value="6" />
+        <LowerBound name="audio.bitrate" value="96" />
+        <UpperBound name="audio.bitrate" value="256" />
+        <LowerBound name="audio.samplingRate" value="32000" />
+        <UpperBound name="audio.samplingRate" value="48000" />
+        <Match name="audio.samplingRate" list="32000|44100|48000" />
+      </Limitations>
+    </VideoAudioCodec>
+  </CodecProfiles>
+</Client>
