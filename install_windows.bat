@@ -10,11 +10,11 @@ IF EXIST "%PROGRAMFILES(X86)%" (GOTO 64BIT)
 IF EXIST "%PROGRAMFILES%" (GOTO 32BIT) ELSE (GOTO UNKNOWN)
 
 :32BIT
-XCOPY "%cd%\*.xml" "%PROGRAMFILES%\Plex\Plex Media Server\Resources\Profiles\" /Y /Q
+XCOPY "%cd%\Profiles\*.xml" "%PROGRAMFILES%\Plex\Plex Media Server\Resources\Profiles\" /Y /Q
 GOTO ERRORCHECK
 
 :64BIT
-XCOPY "%cd%\*.xml" "%PROGRAMFILES(X86)%\Plex\Plex Media Server\Resources\Profiles\" /Y /Q
+XCOPY "%cd%\Profiles\*.xml" "%PROGRAMFILES(X86)%\Plex\Plex Media Server\Resources\Profiles\" /Y /Q
 GOTO ERRORCHECK
 
 :ERRORCHECK
