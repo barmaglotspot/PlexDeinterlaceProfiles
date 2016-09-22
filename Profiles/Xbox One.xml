@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Client name="Xbox One">
+  <!-- Author: Plex Inc. -->
+  <!-- Modified by zynine (github.com/zynine-) from PMS 1.1.4.2757 -->
+  <TranscodeTargets>
+    <VideoProfile protocol="hls" container="mpegts" codec="h264" audioCodec="ac3,eac3,aac" context="streaming">
+      <Setting name="GenerateDummyAudioStreams" value="true" />
+      <Setting name="VideoEncodeFlags" value="-deinterlace" />
+    </VideoProfile>
+    <VideoProfile container="mp4" codec="h264" audioCodec="aac,ac3,eac3,mp3" context="static" />
+    <MusicProfile container="mp3" codec="mp3" />
+    <PhotoProfile container="jpeg" />
+    <SubtitleProfile container="ass" codec="ass" context="all" />
+  </TranscodeTargets>
+  <DirectPlayProfiles>
+    <VideoProfile container="mp4,mov" codec="h264,hevc,mpeg4,wmv2,wmv3,vc1" audioCodec="aac,ac3,eac3,mp3,pcm" />
+    <VideoProfile container="mkv" codec="h264,hevc,mpeg4,vc1" audioCodec="aac,ac3,eac3,mp3,pcm,flac,alac" />
+    <VideoProfile container="asf" codec="wmv2,wmv3,vc1" audioCodec="wmav2,wmapro,wmavoice" />
+    <MusicProfile container="mp4" codec="aac,alac" />
+    <MusicProfile container="mp3" codec="mp2,mp3" />
+    <MusicProfile container="mp2" codec="mp1,mp2" />
+    <MusicProfile container="wav" codec="pcm" />
+    <MusicProfile container="flac" codec="flac" />
+    <PhotoProfile container="jpeg" />
+  </DirectPlayProfiles>
+  <CodecProfiles>
+    <VideoCodec name="*">
+      <Limitations>
+        <UpperBound name="video.width" value="1920" isRequired="true" />
+        <UpperBound name="video.height" value="1080" isRequired="true" />
+      </Limitations>
+    </VideoCodec>
+    <VideoAudioCodec name="*">
+      <Limitations>
+        <UpperBound name="audio.channels" value="6" />
+        <Match name="audio.samplingRate" list="32000|44100|48000" />
+      </Limitations>
+    </VideoAudioCodec>
+  </CodecProfiles>
+  <TranscodeTargetProfiles>
+    <!-- h264 with header stripping or compression doesn't remux correctly -->
+    <VideoTranscodeTarget protocol="*" context="all">
+      <VideoCodec name="*">
+        <Limitations>
+          <NotMatch name="video.headerStripping" value="1" />
+          <Match name="video.headerCompression" value="" />
+          <UpperBound name="video.bitDepth" value="8" />
+          <NotMatch name="video.anamorphic" value="1" />
+          <NotMatch name="video.hasScalingMatrix" value="1" />
+          <Match name="video.pixelFormat" value="yuv420p" />
+        </Limitations>
+      </VideoCodec>
+    </VideoTranscodeTarget>
+  </TranscodeTargetProfiles>
+</Client>
