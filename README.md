@@ -1,5 +1,6 @@
 # PlexDeinterlaceProfiles
-Plex Deinterlace Profiles used for HDHRViewerV2
+Plex Deinterlace Profiles edited for HDHRViewerV2.
+Changed Android.xml audioCodec from **aac** to **mp3** for better Android compatibility.
 
 Windows Location:
 %PROGRAMFILES%\Plex\Plex Media Server\Resources\Profiles
