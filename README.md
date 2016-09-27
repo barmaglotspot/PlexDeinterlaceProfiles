@@ -12,3 +12,9 @@ Plex Deinterlace Profiles edited for HDHRViewerV2.
 
 ## Android Compatibility Fix for HDHRViewerV2 + Deinterlace support
 > [Android.xml](http://github.com/zynine-/PlexDeinterlaceProfiles/blob/master/Profiles/Android.xml)
+
+## Profile mapping
+
+| Profile | Client |
+| :--- | :--- |
+| Konvergo.xml | Plex Media Player |
