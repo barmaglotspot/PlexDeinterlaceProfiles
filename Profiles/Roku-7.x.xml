@@ -4,12 +4,13 @@
   <!-- Modified by zynine (github.com/zynine-) from PMS 1.1.4.2757 -->
   <TranscodeTargets>
     <VideoProfile protocol="hls" container="mpegts" codec="h264" audioCodec="aac,mp3" context="streaming">
-        <Setting name="VideoEncodeFlags" value="-deinterlace" />
-    </VideoProfile>
+      <Setting name="VideoEncodeFlags" value="-deinterlace" />
       <Setting name="BreakNonKeyframes" value="true" />
       <Setting name="HlsElideExtXStart" value="true" />
     </VideoProfile>
-    <VideoProfile protocol="http" container="mkv" codec="h264" audioCodec="aac,mp3,mp2,pcm,flac,alac" subtitleCodec="srt" context="streaming" />
+    <VideoProfile protocol="http" container="mkv" codec="h264" audioCodec="aac,mp3,mp2,pcm,flac,alac" subtitleCodec="srt" context="streaming">
+      <Setting name="VideoEncodeFlags" value="-deinterlace" />
+    </VideoProfile>
     <MusicProfile container="mp3" codec="mp3" />
     <PhotoProfile container="jpeg" />
   </TranscodeTargets>
