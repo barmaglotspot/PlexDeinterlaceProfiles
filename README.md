@@ -1,5 +1,5 @@
 # PlexDeinterlaceProfiles
-Plex Deinterlace Profiles edited for HDHRViewerV2.
+Plex Deinterlace Profiles edited for HDHRViewerV2. For use with PMS 1.1.4. Please don't use on future PMS releases. 
 
 
 ##Profile Locations
